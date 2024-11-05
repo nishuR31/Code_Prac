@@ -9,6 +9,7 @@
   <br>
     <a href="https://github.com/nishuR31/nishuR31" target="_blank" rel="https://github.com/nishuR31/nishuR31"><img src="https://github-profile-trophy.vercel.app/?username=nishuR31&theme=algolia&no-bg=true&no-frame=true" alt="nishur31" /></a>
     <br>
+    
 ![Jokes Card](https://readme-jokes.vercel.app/api?username=nishuR31&theme=algolia&hideBorder)
   <br>
   
