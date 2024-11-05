@@ -12,17 +12,16 @@ class Tree {
     this.root = null;
   }
 
-  // Add a new value to the tree with error handling and input validation
   add() {
     let value;
     while (true) {
       try {
-        value = parseInt(prompt("\nEnter value to add: ") ?? "Invalid"); // Parse and coalesce null/undefined input
+        value = parseInt(prompt("\nEnter value to add: ") ?? "Invalid");
         if (isNaN(value)) {
-          console.log(`Invalid input. Please enter a numeric value.`);
+          console.log("Invalid input. Please enter a numeric value.");
           continue;
         }
-        break; // Exit loop if value is valid
+        break;
       } catch (error) {
         console.log(`An error occurred during input : ${error}\nPlease try again.`);
       }
@@ -64,17 +63,16 @@ class Tree {
     }
   }
 
-  // Search for a value in the tree with error handling and input validation
   search() {
     let value;
     while (true) {
       try {
-        value = parseInt(prompt("Enter value to search: ") ?? "invalid"); // Parse and coalesce null/undefined input
+        value = parseInt(prompt("Enter value to search: ") ?? "invalid");
         if (isNaN(value)) {
           console.log("Invalid input. Please enter a numeric value.");
           continue;
         }
-        break; // Exit loop if value is valid
+        break;
       } catch (error) {
         console.log(`An error occurred during input: ${error}.\nPlease try again.`);
       }
@@ -104,7 +102,6 @@ class Tree {
     console.log(`${value} not found in the tree.`);
   }
 
-  // Display the tree in a specified traversal order with error handling
   display() {
     let ask;
     while (true) {
@@ -123,7 +120,7 @@ class Tree {
           this._postOrderTraversal(this.root);
           break;
         } else {
-          console.log("Invalid entry. Please enter 'I', 'Pr', or 'Po' [case insentive].");
+          console.log("Invalid entry. Please enter 'I', 'Pr', or 'Po' [case insensitive].");
         }
       } catch (error) {
         console.log(`An error occurred during input: ${error}.\n Please try again.`);
@@ -131,7 +128,6 @@ class Tree {
     }
   }
 
-  // Helper function for in-order traversal
   _inOrderTraversal(node) {
     if (node) {
       this._inOrderTraversal(node.left);
@@ -140,7 +136,6 @@ class Tree {
     }
   }
 
-  // Helper function for pre-order traversal
   _preOrderTraversal(node) {
     if (node) {
       console.log(node.value);
@@ -149,7 +144,6 @@ class Tree {
     }
   }
 
-  // Helper function for post-order traversal
   _postOrderTraversal(node) {
     if (node) {
       this._postOrderTraversal(node.left);
@@ -159,7 +153,35 @@ class Tree {
   }
 }
 
-// Example Usage
-const tree = new Tree();
+// Main Menu
+function mainMenu() {
+  const tree = new Tree();
+  while (true) {
+    console.log("\n--- Tree Operations Menu ---");
+    console.log("1. Add a value to the tree");
+    console.log("2. Search for a value in the tree");
+    console.log("3. Display the tree");
+    console.log("4. Exit");
 
-      
+    try {
+      let choice = prompt("Enter your choice (1-4): ") ?? "";
+
+      if (choice === "1") {
+        tree.add();
+      } else if (choice === "2") {
+        tree.search();
+      } else if (choice === "3") {
+        tree.display();
+      } else if (choice === "4") {
+        console.log("Exiting the program. Goodbye!");
+        process.exit(0);  // Exit the program gracefully
+      } else {
+        console.log("Invalid choice. Please enter a number between 1 and 4.");
+      }
+    } catch (error) {
+      console.log(`An error occurred: ${error}. Please try again.`);
+    }
+  }
+}
+
+mainMenu();
