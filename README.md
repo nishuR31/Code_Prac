@@ -7,7 +7,8 @@
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript"height="50" width="50""/> </a>
 
   <br>
-  
+    <a href="https://github.com/nishuR31/nishuR31" target="_blank" rel="https://github.com/nishuR31/nishuR31"><img src="https://github-profile-trophy.vercel.app/?username=nishuR31&theme=algolia&no-bg=true&no-frame=true" alt="nishur31" /></a>
+    <br>
 ![Jokes Card](https://readme-jokes.vercel.app/api?username=nishuR31&theme=algolia&hideBorder)
   <br>
   
